@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GRoT> Graphical Resolver of T4s</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <h1>GRAPHICAL RESOLVER of T4s</h1>
+    <center>
+    <aside>View the project on GitHub: <a href="https://github.com/tutajrobert/grot"> tutajrobert/grot</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Correspond with the author: <a href="mailto:tutajrobert@gmail.com">tutajrobert</a></aside>
+    </center>
+</header>
+<div id="menu"><menu>
+    <a href="main.html">Main</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="inst.html">Installation</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="manual.html">Manual</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="examples.html">Examples</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="tutorial.html">Tutorial</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="struct.html">Structure</a>
+</menu></div><h2><span>Quick start</span></h2>
+<p>Navigate in the system command console or terminal to the GRoT> directory and start the default anylsis with the command<br>
+<code>python run.py</code> &nbsp;or&nbsp; <code>python3 run.py</code></p>
+
+<h2><span>Brief description of how to analyse</span></h2>
+<p>Performing an anlysis in GRoT> requires the use of variuos support programs. Geometry preparation can be done in simple
+graphical software like Paint, Tux Paint, mtPaint et cetera. Analysis settings and boundary conditions are set in a short text file that
+one can edit in any text editor such as for example Notepad, Word or Notepad ++. Running the computational procedure is executed as a single Python command. 
+The results graphical files in <i>png</i> format are stored in the <i>project</i> directory.
+<h4>Five steps to be happy!</h4>
+<ol>
+<li>Go to just downloaded GRoT> directory.</li>
+<li>Create geometry as bitmap image and save it to <i>projects</i> folder.</li>
+<li>Modify input file <i>input.txt</i> to set up analysis options.</li>
+<li>In console or terminal run Python script <i>run.py</i> to perform analysis.</li>
+<li>See the graphical results stored in <i>results</i> folder.</li>
+</ol></p>
+
+<h2><span>Graphical bitmaps</span></h2>
+<p>Created bitmap image saved as <i>bmp</i> file of any name has to be stored in the directory <i>projects</i> in GRoT> folder.
+Input geometry bitmap file will be translated to finite element model, where one image pixel coresponds to one square T4 FE.
+Using the appropriate colors allows the software to read bitmap image as computational model with proper boundary conditions assigned to it.</p>
+
+<h4>Boundary conditions / colors description</h4>
+<ul>
+<li>Body of model, just finite elements: <font color="DarkTurquoise">cyan</font> or <font color="LightSkyBlue">light blue</font></li>
+<li>Lack of elements, empty: <font color="BABABA">white</font></li>
+<li>Constraints: in horizontal direction, vertical and both: <font color="Red">red</font>, <font color ="LawnGreen">green</font>, <font color="blue">dark blue</font></li>
+<li>Force load in nodes of FE (max 3): <font color="fuchsia">magenta</font>, <font color="maroon">brown</font>, <font color="black">black</font></li>
+</ul>
+
+<h2><span>Input file</span></h2>
+<p>The input file for calculation settings is located in the GRoT> directory under the name <i>input.txt</i>. 
+The commented text pieces are preceded by <i>#</i> sign, which describe the functions and commands that are being used. 
+Editing this file allows to select proper analysis options.<footer>Project is maintained by <a href="https://github.com/tutajrobert">tutajrobert</a>. Website style is strongly inspired by the <a href="http://flask.pocoo.org/">Flask webpage</a> and <a href="http://bettermotherfuckingwebsite.com/">better bloody website</a>. Content created using Coulomb electrostatic websites generator. Lavender workshop of creative spirit, Tri-Urbo, RNP!</footer>

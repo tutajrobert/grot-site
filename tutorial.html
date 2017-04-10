@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GRoT> Graphical Resolver of T4s</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <h1>GRAPHICAL RESOLVER of T4s</h1>
+    <center>
+    <aside>View the project on GitHub: <a href="https://github.com/tutajrobert/grot"> tutajrobert/grot</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Correspond with the author: <a href="mailto:tutajrobert@gmail.com">tutajrobert</a></aside>
+    </center>
+</header>
+<div id="menu"><menu>
+    <a href="main.html">Main</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="inst.html">Installation</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="manual.html">Manual</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="examples.html">Examples</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="tutorial.html">Tutorial</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="struct.html">Structure</a>
+</menu></div><h2><span>Tutorial</span></h2>
+
+<p>Stretching of a plane, square plate with a hole serves as a frequent computational example for the use of theory of plane
+state of stress. The computational model prepared as a bitmap image has to be stored in the software directtory <i>projects/plate.bmp</i>.
+Let's move without delay to solve this problem in GRoT>.</p>
+
+<h2><span>Geometry of model</span></h2>
+<p>The plate is a steel square sheet with a side length of 200 mm, a hole diameter of 80 mm and a thickness of 4 mm.
+On one of its sides there is a tensile force of 1000 N applied. The other side is fixed in the tension direction and additionally 
+two middle nodes of this side are fixed in both directions. Set material is steel with a Young modulus of 210 GPa and Poisson ratio 0.3.
+The computational model prepared in Paint is presented below.</p>
+
+<center><img src="plate.bmp" width=400></img></center>
+
+<h4>Meaning of model's colors</h4>
+<ul>
+<li><font color="LightSkyBlue">Light blue</font>: finite elements of model, square of a side 50 pixels</li>
+<li><font color="BABABA">White</font>: cut a hole of diameter 20 pixels</li>
+<li><font color="red">Red</font>: horizontal constraint of elements</li>
+<li><font color="blue">Dark blue</font>: both directions constraint of elements</li>
+<li><font color="fuchsia">Magenta</font>: load in horizontal direction of magnitude 1000 N</li>
+</ul>
+
+<p>The resulting bitmap should be then stored in the GRoT> directory in the <i>projects</i> folder as <i>plate.bmp</i>.</p>
+
+
+<h2><span>Modification of input file</span></h2>
+<p>The most important commands in the input file for the problem of the plate tension are as the following. 
+Set the type of analysis as a plane state of stress, indicate the geometry file name, assign a material, choose the unit, scale the model four times (the side in pixels is 50, in fact it is 200 mm) and assign force to the violet color. 
+This is accomplished by the following commands.<br>
+<code>
+problem planestress<br>
+bmp grot.bmp<br>
+mat steel<br>
+unit mm<br>
+scale 4<br>
+load x 1000 y 0 magenta<br>
+</code>
+The remaining commands are described fully in the input file, which is available by default in the GRoT> directory.</p>
+
+<h2><span>Start of the analysis</span></h2>
+<p>The calculation is started by calling a Python script <i>run.py</i>. This can be accomplished in the Windows command line, in the Linux terminal, or other tool known to the user. 
+The following commands apply to the command prompt for Windows <i>cmd.exe</i>. In this case, the GRoT> folder is located in the specified directory: <i>C:\grot\</i><br>
+<code>cd C:\grot\<br>
+python run.py</code></p>
+
+
+<h2><span>Results</span></h2>
+<p>Results files are available in the directory <i>results/plate/</i>.
+Analytical solution of this problem indicates that the average stress in the plate is 8.3 MPa and the maximum at the edge of the hole is 18,3 MPa. Let's look at the results of the analysis.
+<center><img src="sig_x.png" width=640></img></center>
+
+The maximum normal stress averaged over the element in the horizontal direction obtained in the analysis equals to 20.1 MPa. 
+The place of its appearance on the model is marked with a triangle turned up. The result scale is selected so that 
+the average stress value for all elements is in the middle of legend bar, while the maximum and minimum values are 3 standard deviations away 
+from it. In comparison to the result of the analytical solution, the analysis is quite good considering the small number of 
+elements, all of which are square and thus can not faithfully reproduce the shape of the cut hole.</p> <footer>Project is maintained by <a href="https://github.com/tutajrobert">tutajrobert</a>. Website style is strongly inspired by the <a href="http://flask.pocoo.org/">Flask webpage</a> and <a href="http://bettermotherfuckingwebsite.com/">better bloody website</a>. Content created using Coulomb electrostatic websites generator. Lavender workshop of creative spirit, Tri-Urbo, RNP!</footer>

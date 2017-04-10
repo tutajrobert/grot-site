@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GRoT> Graphical Resolver of T4s</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <h1>GRAPHICAL RESOLVER of T4s</h1>
+    <center>
+    <aside>View the project on GitHub: <a href="https://github.com/tutajrobert/grot"> tutajrobert/grot</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Correspond with the author: <a href="mailto:tutajrobert@gmail.com">tutajrobert</a></aside>
+    </center>
+</header>
+<div id="menu"><menu>
+    <a href="main.html">Main</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="inst.html">Installation</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="manual.html">Manual</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="examples.html">Examples</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="tutorial.html">Tutorial</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="struct.html">Structure</a>
+</menu></div><h2><span>Bar bending</span></h2>
+<p>Rectangular beam with bending force applied to its right end. An excellent example of the shear locking phenomenon that occurs for linear finite elements. Bending stresses are underestimated (331 MPa compared to 375 MPa for analytical calculations), overestimated shear stresses (10 MPa vs. 6 MPa), and beam displacement again underestimated.</p>
+<img src="bend_sig_x.png", width=640></img>
+<img src="bend_tau_xy.png", width=640></img>
+
+<h2><span>Two bars in tensions</span></h2>
+<p>The beams are supported at the left end, while the tensile force is applied to the right. Both beams are of the same dimensions. Also the dimensions of the prepared cutouts are identical with the difference that the top beam has only one cut-out on the top, while the bottom beam has two symmetrical cut-outs on the top and bottom. Despite the difference in cross-sectional areas, the asymmetrically cut beam is more stressed, and not the other way (17 MPa and 15 MPa normal stress). This is all due to the additional bending caused by the difference in the position of the center of cross section and the force application point.</p>
+<img src="tens_sig_x.png", width=640></img>
+<img src="tens_deformed.png", width=640></img>
+
+<h2><span>Brackets comparison</span></h2>
+<p>Both brackets are of the same overall dimensions and are vertically loaded in the same direction. The bracket with additional brace is clearly less bent and less strained.</p>
+<img src="brackets_deformed.png", width=640></img>
+<img src="brackets_huber.png", width=640></img>
+
+<h2><span>Wrench - signed Huber stress</span></h2>
+<p>The example and geometry comes from the examples of the Z88 Aurora (highly recommended!) Link: <a href="http://en.z88.de/examples/">Z88</a>. The result shows the Huber stress of sign of hydrostatic state. This allows to read additional information about tension or compression of the components, since the Huber stresses for the tensile elements are with "+" and for the compressed elements with "-".</p>
+<img src="wrench_sign_huber.png", width=640></img>
+
+<h2><span>GRoT></span></h2>
+<p>Huber stress of word GRoT>. Have fun!</p>
+<img src="grot_huber.png", width=640></img><footer>Project is maintained by <a href="https://github.com/tutajrobert">tutajrobert</a>. Website style is strongly inspired by the <a href="http://flask.pocoo.org/">Flask webpage</a> and <a href="http://bettermotherfuckingwebsite.com/">better bloody website</a>. Content created using Coulomb electrostatic websites generator. Lavender workshop of creative spirit, Tri-Urbo, RNP!</footer>

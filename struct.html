@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GRoT> Graphical Resolver of T4s</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <h1>GRAPHICAL RESOLVER of T4s</h1>
+    <center>
+    <aside>View the project on GitHub: <a href="https://github.com/tutajrobert/grot"> tutajrobert/grot</a>&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;Correspond with the author: <a href="mailto:tutajrobert@gmail.com">tutajrobert</a></aside>
+    </center>
+</header>
+<div id="menu"><menu>
+    <a href="main.html">Main</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="inst.html">Installation</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="manual.html">Manual</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="examples.html">Examples</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="tutorial.html">Tutorial</a>&nbsp;&nbsp; // &nbsp;&nbsp;
+    <a href="struct.html">Structure</a>
+</menu></div><h2><span>Structure of files</span></h2>
+<p>Graphical Resolver of T4s is distributed as bunch of python scripts, which can be placed in chosen system directory.
+To perform analysis one should modify input file <i>input.txt</i>, which is contained in downloaded package. It is needed to
+create graphical file of computational model, which should be placed inside the <i>projects</i> folder. Graphical results of analysis
+will be saved in the directory named <i>results</i>. Below, structure of GRoT> files is given.</p>
+
+<h4>The most important files for the user</h4>
+<ul>
+    <li><i>projects/</i> - directory of graphical files of models ready to be analysed</li>
+    <li><i>results/</i> - directory of graphical results and results gallery</li>
+    <li><i>input.txt</i> - input file of analysis</li>
+    <li><i>run.py</i> - starting script of software</li>
+</ul>
+<h4>Internal files</h4>
+<ul>
+    <li><i>mlib.py</i> - material library</li>
+    <li><i>solver.py</i> - stiffness matrix generation and solving</li>
+    <li><i>bmp.py</i> - convertion of graphical file of model to FE model</li>
+    <li><i>prep.py</i> - creation of nodes, elements and boundaries</li>
+    <li><i>tools.py</i> - secondary functions and timer</li>
+    <li><i>postpro.py</i> - postprocessor of displacement, strains and stresses</li>
+    <li><i>deformed.py</i> - postprocessor of deformed geometries</li>
+    <li><i>version.py</i> - version information</li>
+    <li><i>gallery.py</i> - html gallery generation</li>
+    <li><i>gallery.txt</i> - html gallery styling</li>
+</ul><footer>Project is maintained by <a href="https://github.com/tutajrobert">tutajrobert</a>. Website style is strongly inspired by the <a href="http://flask.pocoo.org/">Flask webpage</a> and <a href="http://bettermotherfuckingwebsite.com/">better bloody website</a>. Content created using Coulomb electrostatic websites generator. Lavender workshop of creative spirit, Tri-Urbo, RNP!</footer>
